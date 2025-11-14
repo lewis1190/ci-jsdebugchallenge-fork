@@ -1,14 +1,14 @@
 // This program calculates student grades and provides feedback
 
 let students = [
-    { name: "Alice", score: 85 }
+    { name: "Alice", score: 85 },
     { name: "Bob", score: 92 },
     { name: "Charlie", score: 78 },
     { name: "Diana", score: 88 }
 ];
 
 function getStudentCount() {
-    return studentList.length;
+    return students.length;
 }
 
 function getAverageScore(scores) {
@@ -16,25 +16,25 @@ function getAverageScore(scores) {
     for (let i = 0; i < scores.length; i++) {
         total += scores[i];
     }
-    let average = total / scores.length;
+    return (total / scores.length);
 }
 
 function getTopScores(scores, n) {
     let top = [];
-    for (let i = 0; i <= n; i++) {
+    for (let i = 0; i < n; i++) {
         top.push(scores[i]);
     }
     return top;
 }
 
 function isPassingGrade(score) {
-    if (score = 70) {
+    if (score >= 70) {
         return true;
     }
     return false;
 }
 
-function getGradeLetters(scores {
+function getGradeLetters(scores) {
     let grades = [];
     for (let score of scores) {
         if (score >= 90) {
@@ -51,28 +51,30 @@ function getGradeLetters(scores {
 }
 
 function displayStudent(index) {
-    let studentt = students[index];
-    console.log(studentt.name + ": " + studentt.score);
+    let student = students[index];
+    console.log(student.name + ": " + student.score);
 }
 
 function printScores(scores) {
     let i = 0;
     while (i < scores.length) {
         console.log(scores[i]);
+        i = ++i;
     }
 }
 
 function createGradeReport(student) {
-    return student.fullName + " scored " + student.score;
+    return student.name + " scored " + student.score;
 }
 
 function validateScores(scores) {
+    let scoresValid = true;
     for (let score of scores) {
         if (score > 100) {
-            return false;
+            scoresValid = false;
         }
     }
-    return true;
+    return scoresValid;
 }
 
 
