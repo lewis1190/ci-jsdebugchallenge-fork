@@ -7,7 +7,7 @@
 3. Copy this link shown in **screenshot 2** and open it into Google Chrome.
 4. Open Devtools in Chrome (F12 or right click -> Inspect).
 5. Open the "Sources" tab in Devtools.
-6. Edit `challenge.js` and see the changes reflected immediately in the browser.
+6. Edit `challenge.js` **in VS Code** and see the changes reflected immediately in the browser.
 7. Place debuggers down as previously shown in the LMS content.
 
 ### Known Issues
